@@ -3,13 +3,13 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\admin\dev\le2hardware3\task1\simulation\modelsim
-vsub16
+vxor1616
 !i10b 1
-!s100 ek9I0FAPD6C^g2@0=O8L12
-I4;U:mi=<;NTiPZTz6ESdG3
-VUinN98EFFYP>kb0cSJPRL1
+!s100 c5EcJ0zET_<AoF?hL;VVW0
+IiN=9Eo^=G^dG`Jh^345bm0
+V7SZKX>7WmXOjmogP2l_Q20
 Z1 dC:\Users\admin\dev\le2hardware3\task1\simulation\modelsim
-w1513743274
+w1513842758
 8C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo
 FC:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo
 L0 31
@@ -17,29 +17,29 @@ Z2 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1513743293.675000
+!s108 1513842809.144000
 !s107 C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|-O0|C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo|
 !s101 -O0
 Z3 o-vlog01compat -work work -O0
 !s92 -vlog01compat -work work +incdir+. -O0
-vsub16_vlg_tst
-IRJfzm2bb;ULedkLnSiRnC0
-V=@5zi9;O:eh`I6Zk49_Kf0
+vxor1616_vlg_tst
+I4b5nkPYH?MNIXTJYGcNl`2
+VF3b]dnZ:j70BA0DcR_mL<2
 R1
-w1513743235
-8C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt
-FC:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt
+w1513842718
+8C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt
+FC:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt
 L0 28
 R2
 r1
 31
 R3
 !i10b 1
-!s100 S=4ER3eICHSI3:^DeOhSn1
+!s100 U:4=_D8m<7_Z32JJWMVCR1
 !s85 0
-!s108 1513743287.397000
-!s107 C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim|C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt|
+!s108 1513842772.584000
+!s107 C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim|C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt|
 !s101 -O0
 !s92 -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim -O0

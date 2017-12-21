@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE30F23I7
-set_global_assignment -name TOP_LEVEL_ENTITY or1616
+set_global_assignment -name TOP_LEVEL_ENTITY xor1616
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:05:32  DECEMBER 19, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -51,7 +51,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH subtest16 -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH xortest1616 -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME test1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id test1
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME test1 -section_id test1
@@ -74,14 +74,18 @@ set_global_assignment -name BDF_FILE halfSubtractor.bdf
 set_global_assignment -name BDF_FILE fullSubtractor.bdf
 set_global_assignment -name BDF_FILE sub16.bdf
 set_global_assignment -name BDF_FILE and1616.bdf
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/task1_test1.vt -section_id test1
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_sub16.vt -section_id subtest16
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_and1616.vt -section_id test_and1616
 set_global_assignment -name EDA_TEST_BENCH_NAME ortest1616 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ortest1616
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ortest1616 -section_id ortest1616
-set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_or1616.vt -section_id ortest1616
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/task1_test1.vt -section_id test1
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_sub16.vt -section_id subtest16
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_and1616.vt -section_id test_and1616
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_or1616.vt -section_id ortest1616
+set_global_assignment -name EDA_TEST_BENCH_NAME xortest1616 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id xortest1616
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME xortest1616 -section_id xortest1616
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_xor1616.vt -section_id xortest1616
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
