@@ -1,0 +1,118 @@
+# do full_adder_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {full_adder_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# 
+# vlog -vlog01compat -work work +incdir+/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim {/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder_vlg_tst
+# 
+# Top level modules:
+# 	full_adder_vlg_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  test1
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps test1 
+# ** Error: (vsim-3170) Could not find '/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work.test1'.
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./full_adder_run_msim_gate_verilog.do PAUSED at line 12
+vsim gate_work.full_adder_vlg_tst
+# vsim gate_work.full_adder_vlg_tst 
+# Loading work.full_adder_vlg_tst
+# Loading work.full_adder
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(81): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(94): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(104): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(114): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(124): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(141): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./full_adder_run_msim_gate_verilog.do PAUSED at line 12
+vlog -vlog01compat -work work +incdir+/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim -O0 /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder_vlg_tst
+# 
+# Top level modules:
+# 	full_adder_vlg_tst
+vsim -voptargs=+acc gate_work.full_adder_vlg_tst
+# vsim -voptargs=+acc gate_work.full_adder_vlg_tst 
+# Loading work.full_adder_vlg_tst
+# Loading work.full_adder
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(81): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(94): Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(104): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(114): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(124): Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) full_adder_7_1200mv_100c_slow.vo(141): Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+#         Region: /full_adder_vlg_tst/i1
+#         Searched libraries:
+#             /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/gate_work
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./full_adder_run_msim_gate_verilog.do PAUSED at line 12
+vsim -L cycloneive_ver -voptargs=+acc gate_work.full_adder_vlg_tst
+# vsim -L cycloneive_ver -voptargs=+acc gate_work.full_adder_vlg_tst 
+# Loading work.full_adder_vlg_tst
+# Loading work.full_adder
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading instances from full_adder_7_1200mv_100c_v_slow.sdo
+# Loading timing data from full_adder_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /full_adder_vlg_tst File: /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt
+add wave sim:/full_adder_vlg_tst/*
+add wave -position end  sim:/full_adder_vlg_tst/ain
+run -all
+# Running testbench

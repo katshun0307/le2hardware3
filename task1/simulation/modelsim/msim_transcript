@@ -1,0 +1,58 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do task1_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {task1_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sub16
+# 
+# Top level modules:
+# 	sub16
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim {C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sub16_vlg_tst
+# 
+# Top level modules:
+# 	sub16_vlg_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  subtest16
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps subtest16 
+# ** Error: (vsim-3170) Could not find 'C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/gate_work.subtest16'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./task1_run_msim_gate_verilog.do PAUSED at line 12
+vlog -vlog01compat -work work +incdir+. -O0 C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sub16
+# 
+# Top level modules:
+# 	sub16
+vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.sub16_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.sub16_vlg_tst 
+# Loading work.sub16_vlg_tst
+# Loading work.sub16
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from task1_7_1200mv_100c_v_slow.sdo
+# Loading timing data from task1_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /sub16_vlg_tst File: C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_sub16.vt
+add wave -position end  sim:/sub16_vlg_tst/subInA
+add wave -position end  sim:/sub16_vlg_tst/subInB
+add wave -position end  sim:/sub16_vlg_tst/diff
+run -all
+# Running testbench

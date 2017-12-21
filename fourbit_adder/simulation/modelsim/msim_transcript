@@ -1,0 +1,30 @@
+# do fourbit_adder_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {fourbit_adder_7_1200mv_100c_slow.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fourbit_adder
+# 
+# Top level modules:
+# 	fourbit_adder
+# 
+# vlog -vlog01compat -work work +incdir+/home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim {/home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim/dfftest_test2.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fourbit_adder_vlg_tst
+# ** Error: /home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim/dfftest_test2.vt(51): (vlog-2730) Undefined variable: 'clock'.
+# ** Error: /home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim/dfftest_test2.vt(52): (vlog-2730) Undefined variable: 'reset'.
+# ** Error: /home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim/dfftest_test2.vt(53): (vlog-2730) Undefined variable: 'data'.
+# ** Error: /home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim/dfftest_test2.vt(82): near "end": syntax error, unexpected end
+# ** Error: /opt/altera/13.0sp1/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./fourbit_adder_run_msim_gate_verilog.do line 10
+# /opt/altera/13.0sp1/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/016/a0161819/le2hardware3/fourbit_adder/simulation/modelsim {/home/016/a0161819/le2hardware3/fourbit_adder..."

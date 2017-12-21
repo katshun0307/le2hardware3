@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim
+vfull_adder
+I0<QA^VR1KldBb[QP^jNeg1
+VIbThkk?O3If8KX]c>WO:P2
+Z1 d/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim
+w1513663637
+8full_adder_7_1200mv_100c_slow.vo
+Ffull_adder_7_1200mv_100c_slow.vo
+L0 31
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 aSd9<Z4`WJ?QNihVR@1780
+!s85 0
+!s108 1513663658.110524
+!s107 full_adder_7_1200mv_100c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|full_adder_7_1200mv_100c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vfull_adder_vlg_tst
+!i10b 1
+!s100 l5KZ8=0bT<69ONY`I=Rj]1
+I?`K]iHN;OMN?LdTT@2Wbo3
+V9`CSS57nM?IkHU3ke:hDJ1
+R1
+w1513663534
+8/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt
+F/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1513663683.132062
+!s107 /home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim|-O0|/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim/full_adder_test1.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+/home/016/a0161819/le2hardware3/full_adder/simulation/modelsim -O0

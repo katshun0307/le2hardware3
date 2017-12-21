@@ -1,0 +1,69 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/20/2017 07:20:30"
+                                                                                
+// Verilog Test Bench template for design : sub16
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module sub16_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [15:0] subInA;
+reg [15:0] subInB;
+// wires                                               
+wire borrow;
+wire [15:0]  diff;
+
+// assign statements (if any)                          
+sub16 i1 (
+// port map - connection between master ports and signals/registers   
+	.borrow(borrow),
+	.diff(diff),
+	.subInA(subInA),
+	.subInB(subInB)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+subInA <= 16'b0111111111111111;
+subInB <= 16'b0000000000011111;
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+#100
+subInA <= 16'b0111111111111111;
+subInB <= 16'b0000000000011111;
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+
