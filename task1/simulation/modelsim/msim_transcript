@@ -12,30 +12,30 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {task1_7_1200mv_100c_slow.vo}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module xor1616
+# -- Compiling module main
 # 
 # Top level modules:
-# 	xor1616
+# 	main
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim {C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt}
+# vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim {C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_main.vt}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module xor1616_vlg_tst
+# -- Compiling module main_vlg_tst
 # 
 # Top level modules:
-# 	xor1616_vlg_tst
+# 	main_vlg_tst
 # 
-# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  xortest1616
-# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps xortest1616 
-# ** Error: (vsim-3170) Could not find 'C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/gate_work.xortest1616'.
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  maintest
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps maintest 
+# ** Error: (vsim-3170) Could not find 'C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/gate_work.maintest'.
 # 
 # Error loading design
 # Error: Error loading design 
 #        Pausing macro execution 
 # MACRO ./task1_run_msim_gate_verilog.do PAUSED at line 12
-vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.xor1616_vlg_tst
-# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.xor1616_vlg_tst 
-# Loading work.xor1616_vlg_tst
-# Loading work.xor1616
+vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.main_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.main_vlg_tst 
+# Loading work.main_vlg_tst
+# Loading work.main
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
 # Loading cycloneive_ver.cycloneive_lcell_comb
@@ -44,24 +44,10 @@ vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ve
 # Loading instances from task1_7_1200mv_100c_v_slow.sdo
 # Loading timing data from task1_7_1200mv_100c_v_slow.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /xor1616_vlg_tst File: C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt
-vlog -vlog01compat -work work +incdir+. -O0 C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/task1_7_1200mv_100c_slow.vo
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module xor1616
-# 
-# Top level modules:
-# 	xor1616
-vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.xor1616_vlg_tst
-# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.xor1616_vlg_tst 
-# Loading work.xor1616_vlg_tst
-# Loading work.xor1616
-# Loading cycloneive_ver.cycloneive_io_obuf
-# Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading instances from task1_7_1200mv_100c_v_slow.sdo
-# Loading timing data from task1_7_1200mv_100c_v_slow.sdo
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /xor1616_vlg_tst File: C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt
-add wave -position insertpoint sim:/xor1616_vlg_tst/*
+#    Time: 0 ps  Iteration: 0  Instance: /main_vlg_tst File: C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_main.vt
+add wave -position end  sim:/main_vlg_tst/opcode
+add wave -position end  sim:/main_vlg_tst/mainout
+add wave -position end  sim:/main_vlg_tst/inputB
+add wave -position end  sim:/main_vlg_tst/inputA
 run -all
 # Running testbench

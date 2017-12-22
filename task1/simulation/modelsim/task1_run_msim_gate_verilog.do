@@ -7,9 +7,9 @@ vmap work gate_work
 
 vlog -vlog01compat -work work +incdir+. {task1_7_1200mv_100c_slow.vo}
 
-vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim {C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_xor1616.vt}
+vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim {C:/Users/admin/dev/le2hardware3/task1/simulation/modelsim/test_main.vt}
 
-vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  xortest1616
+vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  maintest
 
 add wave *
 view structure

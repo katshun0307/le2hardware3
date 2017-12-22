@@ -17,37 +17,40 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "12/20/2017 12:58:58"
+// Generated on "12/22/2017 12:13:00"
                                                                                 
-// Verilog Test Bench template for design : and1616
+// Verilog Test Bench template for design : main
 // 
 // Simulation tool : ModelSim-Altera (Verilog)
 // 
 
 `timescale 1 ns/ 1 ps
-module and1616_vlg_tst();
+module main_vlg_tst();
 // constants                                           
 // general purpose registers
 reg eachvec;
 // test vector input registers
-reg [15:0] andInA;
-reg [15:0] andInB;
-// wires                                             
-wire [15:0]  andOut;
+reg [15:0] inputA;
+reg [15:0] inputB;
+reg [3:0] opcode;
+// wires                                               
+wire [15:0]  mainout;
 
 // assign statements (if any)                          
-and1616 i1 (
+main i1 (
 // port map - connection between master ports and signals/registers   
-	.andInA(andInA),
-	.andInB(andInB),
-	.andOut(andOut)
+	.inputA(inputA),
+	.inputB(inputB),
+	.mainout(mainout),
+	.opcode(opcode)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-andInA <= 16'b1111111111111111;
-andInB <= 16'b1111111111111111;                                                 
+inputA <= 16'b0000000000000000;
+inputB <= 16'b0000000000000000;
+opcode <= 4'b0000;
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
@@ -56,13 +59,17 @@ always
 // @(event1 or event2 or .... eventn)                  
 begin                                                  
 // code executes for every event on sensitivity list   
-// insert code here --> begin 
-# 100
-andInA <= 16'b1111100000111111;
-andInB <= 16'b1111111111110001; 
-# 100                         
-andInA <= 16'b1111111111111111;
-andInB <= 16'b1111111111111111;                                                       
+// insert code here --> begin                          
+#100
+inputA <= 16'b0011000011111111;
+inputB <= 16'b0011110000011100;
+opcode <= 4'b0010;
+#100
+opcode <= 4'b0011;
+#100
+opcode <= 4'b0100;
+#100
+opcode <= 4'b1111;                                                       
 @eachvec;                                              
 // --> end                                             
 end                                                    
