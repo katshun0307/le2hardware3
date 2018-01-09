@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\admin\dev\le2hardware3\task2\simulation\modelsim
+vmain
+I_izm8<PT:XOPLEG3d2Vg32
+ViSROIVC4Ua`bd=TPHOLah0
+Z1 dC:\Users\admin\dev\le2hardware3\task2\simulation\modelsim
+w1515458891
+8task2_7_1200mv_100c_slow.vo
+Ftask2_7_1200mv_100c_slow.vo
+L0 31
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 Goh8YmM4imiMm^l0BfWN82
+!s85 0
+!s108 1515461311.932000
+!s107 task2_7_1200mv_100c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|task2_7_1200mv_100c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vmain_vlg_tst
+!i10b 1
+!s100 gAz@9z]A=z6;fcokRcCbW0
+I3DgejP<jZR?nnc7I3dNQ`0
+V9kNenJhdYdWV`]Q3GV^PC1
+R1
+w1515461335
+8C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt
+FC:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1515461339.983000
+!s107 C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim|-O0|C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim -O0
