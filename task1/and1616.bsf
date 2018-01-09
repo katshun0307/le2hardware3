@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 208 32)
 		(output)
-		(text "andOut[15..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
-		(text "andOut[15..0]" (rect 111 27 187 41)(font "Arial" (font_size 8)))
+		(text "andOut[17..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
+		(text "andOut[17..0]" (rect 111 27 187 41)(font "Arial" (font_size 8)))
 		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(drawing

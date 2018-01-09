@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "12/22/2017 12:13:00"
+// Generated on "12/29/2017 15:32:28"
                                                                                 
 // Verilog Test Bench template for design : main
 // 
@@ -34,14 +34,16 @@ reg [15:0] inputA;
 reg [15:0] inputB;
 reg [3:0] opcode;
 // wires                                               
-wire [15:0]  mainout;
+wire [3:0]  cond;
+wire [15:0]  mainoutput;
 
 // assign statements (if any)                          
 main i1 (
 // port map - connection between master ports and signals/registers   
+	.cond(cond),
 	.inputA(inputA),
 	.inputB(inputB),
-	.mainout(mainout),
+	.mainoutput(mainoutput),
 	.opcode(opcode)
 );
 initial                                                

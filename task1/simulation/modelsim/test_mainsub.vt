@@ -1,0 +1,86 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/29/2017 15:32:28"
+                                                                                
+// Verilog Test Bench template for design : main
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module main_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [15:0] inputA;
+reg [15:0] inputB;
+reg [3:0] opcode;
+// wires                                               
+wire [3:0]  cond;
+wire [15:0]  mainoutput;
+
+// assign statements (if any)                          
+main i1 (
+// port map - connection between master ports and signals/registers   
+	.cond(cond),
+	.inputA(inputA),
+	.inputB(inputB),
+	.mainoutput(mainoutput),
+	.opcode(opcode)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+opcode <= 4'b0001;                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+#100                       
+inputA <= 16'b0000111111111111;
+inputB <= 16'b0000111111110000;
+#100
+inputA <= 16'b0000111100001111;
+inputB <= 16'b0000111111110000;
+#100
+
+// ijiwaru tests
+#100
+inputA <= 16'b1000000000000000;
+inputB <= 16'b1000000000000000;
+#100
+inputA <= 16'b1111000000000000;
+#100
+inputA <= 16'b0000000000000000;
+#100
+inputA <= 16'b0000000000001111;
+#100                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

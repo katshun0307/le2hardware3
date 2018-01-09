@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 200 32)
 		(output)
-		(text "xorOut[15..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
-		(text "xorOut[15..0]" (rect 105 27 179 41)(font "Arial" (font_size 8)))
+		(text "xorOut[17..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "xorOut[17..0]" (rect 105 27 179 41)(font "Arial" (font_size 8)))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
 	(drawing

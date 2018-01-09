@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 184 32)
 		(output)
-		(text "orOut[15..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
-		(text "orOut[15..0]" (rect 96 27 163 41)(font "Arial" (font_size 8)))
+		(text "orOut[17..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "orOut[17..0]" (rect 96 27 163 41)(font "Arial" (font_size 8)))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing

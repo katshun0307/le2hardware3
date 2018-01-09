@@ -24,7 +24,7 @@
 // Simulation tool : ModelSim-Altera (Verilog)
 // 
 
-`timescale 1 ns/ 1 ps
+`timescale 1 ps/ 1 ps
 module sub16_vlg_tst();
 // constants                                           
 // general purpose registers
@@ -49,7 +49,7 @@ begin
 // code that executes only once                        
 // insert code here --> begin                          
 subInA <= 16'b0111111111111111;
-subInB <= 16'b0000000000011111;
+subInB <= 16'b0000000000011111;                                                       
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
@@ -61,7 +61,7 @@ begin
 // insert code here --> begin                          
 #100
 subInA <= 16'b0111111111111111;
-subInB <= 16'b0000000000011111;
+subInB <= 16'b0000000000011111;                                                       
 @eachvec;                                              
 // --> end                                             
 end                                                    

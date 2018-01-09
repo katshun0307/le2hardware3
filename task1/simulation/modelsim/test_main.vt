@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "12/22/2017 12:13:00"
+// Generated on "12/29/2017 15:32:28"
                                                                                 
 // Verilog Test Bench template for design : main
 // 
@@ -34,14 +34,16 @@ reg [15:0] inputA;
 reg [15:0] inputB;
 reg [3:0] opcode;
 // wires                                               
-wire [15:0]  mainout;
+wire [3:0]  cond;
+wire [15:0]  mainoutput;
 
 // assign statements (if any)                          
 main i1 (
 // port map - connection between master ports and signals/registers   
+	.cond(cond),
 	.inputA(inputA),
 	.inputB(inputB),
-	.mainout(mainout),
+	.mainoutput(mainoutput),
 	.opcode(opcode)
 );
 initial                                                
@@ -50,7 +52,7 @@ begin
 // insert code here --> begin                          
 inputA <= 16'b0000000000000000;
 inputB <= 16'b0000000000000000;
-opcode <= 4'b0000;
+opcode <= 4'b0000;                                                       
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
@@ -63,13 +65,46 @@ begin
 #100
 inputA <= 16'b0011000011111111;
 inputB <= 16'b0011110000011100;
+opcode <= 4'b0000;
+#100
+opcode <= 4'b0001;
+#100
 opcode <= 4'b0010;
 #100
 opcode <= 4'b0011;
 #100
 opcode <= 4'b0100;
 #100
-opcode <= 4'b1111;                                                       
+//iziwaru test
+//
+//add
+//
+#100
+opcode <= 4'b0000;
+//overflow
+inputA <= 16'b0111111111111111;
+inputB <= 16'b0111111111111111;
+//zero
+#100
+inputA <= 16'b0000111111110001;
+inputB <= 16'b1111000000001111;
+//
+//subtract
+//
+#100
+opcode <= 4'b0001;
+//zero
+inputB <= 16'b1000000000000000;
+inputA <= 16'b1000000000000000;
+//overflow
+#100
+inputA <= 16'b0000000000000000;
+#100
+inputA <= 16'b0000111100000001;
+// dont overflow
+#100
+inputA <= 16'b1111000011110000;
+
 @eachvec;                                              
 // --> end                                             
 end                                                    

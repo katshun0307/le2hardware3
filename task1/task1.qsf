@@ -51,7 +51,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH maintest -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH mainlogic -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME test1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id test1
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME test1 -section_id test1
@@ -74,9 +74,28 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ortest1616 -section_id or
 set_global_assignment -name EDA_TEST_BENCH_NAME xortest1616 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id xortest1616
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME xortest1616 -section_id xortest1616
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME maintest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id maintest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME maintest -section_id maintest
+set_global_assignment -name EDA_TEST_BENCH_NAME adder16test -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id adder16test
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME adder16test -section_id adder16test
+set_global_assignment -name EDA_TEST_BENCH_NAME adder8test -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id adder8test
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME adder8test -section_id adder8test
+set_global_assignment -name EDA_TEST_BENCH_NAME halfAddertest -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id halfAddertest
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME halfAddertest -section_id halfAddertest
+set_global_assignment -name EDA_TEST_BENCH_NAME subtrator_test -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id subtrator_test
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME subtrator_test -section_id subtrator_test
+set_global_assignment -name EDA_TEST_BENCH_NAME signinvert_test -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id signinvert_test
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME signinvert_test -section_id signinvert_test
+set_global_assignment -name BDF_FILE selector2.bdf
+set_global_assignment -name BDF_FILE selector18.bdf
+set_global_assignment -name BDF_FILE fullAdder.bdf
+set_global_assignment -name BDF_FILE halfAdder.bdf
 set_global_assignment -name BDF_FILE dataselect.bdf
 set_global_assignment -name BDF_FILE code0110.bdf
 set_global_assignment -name BDF_FILE code0101.bdf
@@ -86,19 +105,45 @@ set_global_assignment -name BDF_FILE code0010.bdf
 set_global_assignment -name BDF_FILE code0001.bdf
 set_global_assignment -name BDF_FILE xor1616.bdf
 set_global_assignment -name BDF_FILE or1616.bdf
-set_global_assignment -name BDF_FILE halfSubtractor.bdf
-set_global_assignment -name BDF_FILE fullSubtractor.bdf
 set_global_assignment -name BDF_FILE sub16.bdf
 set_global_assignment -name BDF_FILE and1616.bdf
 set_global_assignment -name BDF_FILE main.bdf
 set_global_assignment -name BDF_FILE code0000.bdf
+set_global_assignment -name BDF_FILE signInversion.bdf
+set_global_assignment -name BDF_FILE adder8.bdf
+set_global_assignment -name BDF_FILE selector.bdf
+set_global_assignment -name BDF_FILE selector4.bdf
+set_global_assignment -name BDF_FILE selector8.bdf
+set_global_assignment -name BDF_FILE adder16.bdf
+set_global_assignment -name BDF_FILE selector16.bdf
+set_global_assignment -name BDF_FILE subtractor.bdf
+set_global_assignment -name BDF_FILE selector20.bdf
+set_global_assignment -name BDF_FILE iszero.bdf
+set_global_assignment -name BDF_FILE makeoutput.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME mainadd -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mainadd
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mainadd -section_id mainadd
+set_global_assignment -name EDA_TEST_BENCH_NAME mainsub -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mainsub
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mainsub -section_id mainsub
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/task1_test1.vt -section_id test1
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_sub16.vt -section_id subtest16
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_and1616.vt -section_id test_and1616
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_or1616.vt -section_id ortest1616
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_xor1616.vt -section_id xortest1616
-set_global_assignment -name EDA_TEST_BENCH_NAME maintest -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id maintest
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME maintest -section_id maintest
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_main.vt -section_id maintest
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_adder16.vt -section_id adder16test
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_adder8.vt -section_id adder8test
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_halfAdder.vt -section_id halfAddertest
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_subtractor.vt -section_id subtrator_test
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_signinversion.vt -section_id signinvert_test
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_mainadd.vt -section_id mainadd
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_mainsub.vt -section_id mainsub
+set_global_assignment -name EDA_TEST_BENCH_NAME mainlogic -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mainlogic
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mainlogic -section_id mainlogic
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/test_mainlogic.vt -section_id mainlogic
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

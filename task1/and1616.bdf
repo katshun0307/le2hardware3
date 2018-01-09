@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 344 40 512 56)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "andInA[15..0]" (rect 5 0 72 12)(font "Arial" ))
+	(text "andInA[15..0]" (rect 5 0 71 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 344 56 512 72)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "andInB[15..0]" (rect 5 0 72 12)(font "Arial" ))
+	(text "andInB[15..0]" (rect 5 0 71 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 800 888 976 904)
+	(rect 888 912 1064 928)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "andOut[15..0]" (rect 90 0 157 12)(font "Arial" ))
+	(text "andOut[17..0]" (rect 90 0 157 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -579,6 +579,23 @@ applicable agreement for further details.
 		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
 	)
 )
+(symbol
+	(rect 800 952 832 984)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst16" (rect 3 21 32 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(pt 568 160)
 	(pt 568 216)
@@ -956,11 +973,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 736 840)
-	(pt 736 896)
-	(bus)
-)
-(connector
 	(text "andOut[0]" (rect 714 40 762 52)(font "Arial" ))
 	(pt 704 56)
 	(pt 736 56)
@@ -1036,12 +1048,6 @@ applicable agreement for further details.
 	(pt 736 896)
 )
 (connector
-	(text "andOut[15..0]" (rect 746 880 813 892)(font "Arial" ))
-	(pt 736 896)
-	(pt 800 896)
-	(bus)
-)
-(connector
 	(pt 520 64)
 	(pt 520 80)
 	(bus)
@@ -1076,6 +1082,33 @@ applicable agreement for further details.
 	(text "andOut[7]" (rect 704 432 752 444)(font "Arial" ))
 	(pt 704 448)
 	(pt 736 448)
+)
+(connector
+	(pt 736 840)
+	(pt 736 896)
+	(bus)
+)
+(connector
+	(pt 736 896)
+	(pt 736 920)
+	(bus)
+)
+(connector
+	(text "andOut[17..16]" (rect 800 880 812 953)(font "Arial" )(vertical))
+	(pt 816 952)
+	(pt 816 920)
+	(bus)
+)
+(connector
+	(text "andOut[15..0],andOut[17..0]" (rect 746 904 884 916)(font "Arial" ))
+	(pt 736 920)
+	(pt 816 920)
+	(bus)
+)
+(connector
+	(pt 816 920)
+	(pt 888 920)
+	(bus)
 )
 (junction (pt 568 104))
 (junction (pt 608 120))
@@ -1122,3 +1155,4 @@ applicable agreement for further details.
 (junction (pt 736 840))
 (junction (pt 736 896))
 (junction (pt 608 80))
+(junction (pt 816 920))
