@@ -147,6 +147,23 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 192 72 368 88)
+	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
+	(text "out0[15..0]" (rect 5 0 59 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 12)(pt 124 4))
+		(line (pt 98 4)(pt 94 8))
+		(line (pt 94 8)(pt 98 12))
+		(line (pt 98 12)(pt 94 8))
+	)
+	(flipy)
+)
 (symbol
 	(rect 1096 176 1160 256)
 	(text "DFF" (rect 1 0 19 10)(font "Arial" (font_size 6)))
@@ -550,16 +567,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 296 152)
-	(pt 312 152)
-	(bus)
-)
-(connector
-	(pt 312 152)
-	(pt 368 152)
-	(bus)
-)
-(connector
 	(pt 408 200)
 	(pt 432 200)
 	(bus)
@@ -576,16 +583,6 @@ applicable agreement for further details.
 (connector
 	(pt 376 296)
 	(pt 696 296)
-)
-(connector
-	(pt 368 152)
-	(pt 368 -160)
-	(bus)
-)
-(connector
-	(pt 368 -160)
-	(pt 400 -160)
-	(bus)
 )
 (connector
 	(pt 384 -136)
@@ -834,6 +831,31 @@ applicable agreement for further details.
 	(pt 1448 208)
 	(bus)
 )
+(connector
+	(pt 400 -160)
+	(pt 368 -160)
+	(bus)
+)
+(connector
+	(pt 296 152)
+	(pt 312 152)
+	(bus)
+)
+(connector
+	(pt 312 152)
+	(pt 368 152)
+	(bus)
+)
+(connector
+	(pt 368 -160)
+	(pt 368 80)
+	(bus)
+)
+(connector
+	(pt 368 80)
+	(pt 368 152)
+	(bus)
+)
 (junction (pt 312 264))
 (junction (pt 376 296))
 (junction (pt 312 152))
@@ -847,3 +869,4 @@ applicable agreement for further details.
 (junction (pt 376 -256))
 (junction (pt 1184 -256))
 (junction (pt 744 -256))
+(junction (pt 368 80))

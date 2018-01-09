@@ -49,6 +49,35 @@ vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ve
 # Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading altera_ver.dffeas
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from task2_7_1200mv_100c_v_slow.sdo
+# ** Warning: (vsim-3017) C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt(54): [TFMPC] - Too few port connections. Expected 9, found 8.
+# 
+#         Region: /main_vlg_tst/i1
+# ** Warning: (vsim-3722) C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt(54): [TFMPC] - Missing connection for port 'out0'.
+# 
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from task2_7_1200mv_100c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /main_vlg_tst File: C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt
+vlog -vlog01compat -work work +incdir+C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim -O0 C:/Users/admin/dev/le2hardware3/task2/simulation/modelsim/test_main1.vt
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main_vlg_tst
+# 
+# Top level modules:
+# 	main_vlg_tst
+vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.main_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps gate_work.main_vlg_tst 
+# Loading work.main_vlg_tst
+# Loading work.main
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading altera_ver.dffeas
 # Loading instances from task2_7_1200mv_100c_v_slow.sdo
 # Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from task2_7_1200mv_100c_v_slow.sdo
@@ -58,9 +87,19 @@ add wave -position end  sim:/main_vlg_tst/clock
 add wave -position end  sim:/main_vlg_tst/in
 add wave -position end  sim:/main_vlg_tst/opcode
 add wave -position end  sim:/main_vlg_tst/reset
+add wave -position end  sim:/main_vlg_tst/out0
 add wave -position end  sim:/main_vlg_tst/out1
 add wave -position end  sim:/main_vlg_tst/out2
 add wave -position end  sim:/main_vlg_tst/out3
 add wave -position end  sim:/main_vlg_tst/out4
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: admin  Hostname: PC-B041  ProcessID: 640
+# 
+#           Attempting to use alternate WLF file "./wlftfqz9f2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftfqz9f2
+# 
 run -all
 # Running testbench
